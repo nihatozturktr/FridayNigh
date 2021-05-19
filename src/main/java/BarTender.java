@@ -33,7 +33,6 @@ public class BarTender extends Staff{
         //check if customer has enough money
         //and make sure that the customer drinkAmount goes up
         // and money goes down if good
-
     }
 
     public void buyCocktail(Customer customer, int amount){
