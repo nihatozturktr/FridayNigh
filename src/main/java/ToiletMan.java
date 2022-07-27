@@ -25,7 +25,7 @@ public class ToiletMan extends Staff {
     }
 
     private void promoteSafeFun(Customer customer){
-        //check if Customer is DTF and if he has no condom
+        //check if he has no condom
         //AND if he had less than 3 drinks
         //give them a condom
     }
