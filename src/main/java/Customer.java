@@ -3,7 +3,6 @@ public class Customer {
     private String name;
     private int age;
     private double euros;
-    private boolean DTF;
     private boolean hasCondom;
     private int beersThatTheyDrunk;
     private final double tippingAmount = 1.50;
@@ -11,11 +10,11 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(String name, int age, double euros, boolean DTF, boolean hasCondom) {
+    public Customer(String name, int age, double euros, boolean hasCondom) {
         this.name = name;
         this.age = age;
         this.euros = euros;
-        this.DTF = DTF;
+      
         this.hasCondom = hasCondom;
     }
 
@@ -43,13 +42,7 @@ public class Customer {
         this.euros = euros;
     }
 
-    public boolean isDTF() {
-        return DTF;
-    }
 
-    public void setDTF(boolean DTF) {
-        this.DTF = DTF;
-    }
 
     public boolean isHasCondom() {
         return hasCondom;
@@ -69,7 +62,7 @@ public class Customer {
 
 
     public boolean feelingConfident(){
-        //check if they drank more than 5 beers, if they have a condom and if they're DTF
+        //check if they drank more than 5 beers and if they have a condom
         return false;
     }
 
