@@ -14,7 +14,6 @@ public class Customer {
         this.name = name;
         this.age = age;
         this.euros = euros;
-      
         this.hasCondom = hasCondom;
     }
 
@@ -73,10 +72,20 @@ public class Customer {
         //1. make sure that you return the leftover money you hav after tips calculation
         //2: Make sure the customers money goes down
         //3. Make sure the staff's tips go up
-        double expectedTip =0;
-        // check how many drinks you had.
+        //---------------------------------------------------------
         //multiply that amount of drinks with the tippingAmount
+        // check how many drinks you had.
+        double expectedTip = beersThatTheyDrunk * tippingAmount;
         //check if you have enough money. If the amount is too low,
+        double netBeerPrice = beersThatTheyDrunk*euros;
+        double totalPrice = expectedTip+netBeerPrice;
+       boolean enoughMoney;
+       if(totalPrice - expectedTip = netBeerPrice){
+           enoughMoney ==true; <<
+       }
+
+
+
         //only give the amount that you have left
         //return the amount of money you have left
         return 0;
