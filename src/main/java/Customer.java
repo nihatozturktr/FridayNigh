@@ -61,12 +61,19 @@ public class Customer {
     }
 
 
-    public boolean feelingConfident(){
+    public boolean feelingConfident() {
         //check if they drank more than 5 beers and if they have a condom
-        return false;
-    }
+        if (beersThatTheyDrunk > 5 && hasCondom == true) {
+            return true;
+        }else{
+            return false;
+        } }
 
-    public int tipTheCuteStaff(Staff staff){
+    public double tipTheCuteStaff(Staff staff){
+        //1. make sure that you return the leftover money you hav after tips calculation
+        //2: Make sure the customers money goes down
+        //3. Make sure the staff's tips go up
+        double expectedTip =
         // check how many drinks you had.
         //multiply that amount of drinks with the tippingAmount
         //check if you have enough money. If the amount is too low,
