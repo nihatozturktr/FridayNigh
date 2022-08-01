@@ -20,7 +20,16 @@ public class Bouncer extends Staff {
 
 
     public boolean isCustomerOldEnoughToEnter(Customer customer){
+
+        if (customer.getAge()>=18){
+            return true;
+        }
         //check ID of the customer and return true if they're old enough
+
+        if(customer.getAge()<18)
+            if(customer.getEuros()>=minimumBribe){
+                return true;
+            }
 
         return false;
     }
