@@ -14,14 +14,14 @@ public class BouncerTest {
     }
     @Test
     public void testAgeRestriction(){
-        Assert.assertFalse(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer));
+        Assert.assertFalse(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer, underAgeCustomer.getAge()));
         System.out.println("Under age is good coz we give age  15 give false ");
         Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
         System.out.println("Out of Age good cow we give age 18 ");
     }
     @Test
     public  void testBrid(){
-        Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer,23));
+        Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer,23));
         Assert.assertFalse(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer,17));
     }
 }
