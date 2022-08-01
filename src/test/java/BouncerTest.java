@@ -14,9 +14,11 @@ public class BouncerTest {
     }
     @Test
     public void testAgeRestriction(){
-
         Assert.assertFalse(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer));
-        // Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
-        System.out.println("deneme01");
+        System.out.println("Good");
+        Assert.assertTrue();
+
+    //Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
+
     }
 }

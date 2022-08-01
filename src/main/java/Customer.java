@@ -77,17 +77,22 @@ public class Customer {
         // check how many drinks you had.
         double expectedTip = beersThatTheyDrunk * tippingAmount;
         //check if you have enough money. If the amount is too low,
-        double netBeerPrice = beersThatTheyDrunk*euros;
-        double totalPrice = expectedTip+netBeerPrice;
+
        boolean enoughMoney;
-       if(totalPrice - expectedTip = netBeerPrice){
-           enoughMoney ==true; <<
+       if(euros>expectedTip){
+           enoughMoney = true;
+           euros-=expectedTip;
+           staff.setAmountsOfTips((staff.getAmountsOfTips()+expectedTip));
        }
+       else{
 
-
+           staff.setAmountsOfTips(staff.getAmountsOfTips()+euros);
+           euros=0;
+       }
+       return  euros;
 
         //only give the amount that you have left
         //return the amount of money you have left
-        return 0;
+
     }
 }
