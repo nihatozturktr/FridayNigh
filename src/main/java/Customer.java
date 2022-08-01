@@ -79,14 +79,14 @@ public class Customer {
         //check if you have enough money. If the amount is too low,
 
        boolean enoughMoney;
-       if(euros>expectedTip){
-           enoughMoney = true;
+       if(euros>=expectedTip){
+
            euros-=expectedTip;
            staff.setAmountsOfTips((staff.getAmountsOfTips()+expectedTip));
        }
        else{
 
-           staff.setAmountsOfTips(staff.getAmountsOfTips()+euros);
+           staff.setAmountsOfTips((staff.getAmountsOfTips()+euros));
            euros=0;
        }
        return  euros;
