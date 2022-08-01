@@ -30,7 +30,6 @@ public class Bouncer extends Staff {
             if(customer.getEuros()>=minimumBribe){
                 return true;
             }
-
         return false;
     }
 
