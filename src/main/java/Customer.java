@@ -73,5 +73,6 @@ public class Customer {
         //only give the amount that you have left
         //return the amount of money you have left
         return 0;
+        //test
     }
 }
