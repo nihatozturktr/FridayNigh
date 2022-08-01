@@ -73,7 +73,7 @@ public class Customer {
         //1. make sure that you return the leftover money you hav after tips calculation
         //2: Make sure the customers money goes down
         //3. Make sure the staff's tips go up
-        double expectedTip =
+        double expectedTip =0;
         // check how many drinks you had.
         //multiply that amount of drinks with the tippingAmount
         //check if you have enough money. If the amount is too low,
