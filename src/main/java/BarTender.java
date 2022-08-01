@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BarTender extends Staff{
 
 
@@ -33,6 +35,18 @@ public class BarTender extends Staff{
         //check if customer has enough money
         //and make sure that the customer drinkAmount goes up
         // and money goes down if good
+
+        int BeersThatTheyDrunkNow = 0;
+
+        if (customer.getEuros()>amount) {
+            ++BeersThatTheyDrunkNow;
+            customer.setBeersThatTheyDrunk(BeersThatTheyDrunkNow);
+            --amount;
+        }else {
+            System.out.println("There are not enough money");
+
+        }
+
     }
 
     public void buyCocktail(Customer customer, int amount){
@@ -40,6 +54,23 @@ public class BarTender extends Staff{
         //and make sure that the customer drinkAmount goes up
         // and money goes down if good
 
+        double buyCocktail =0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
 
 }

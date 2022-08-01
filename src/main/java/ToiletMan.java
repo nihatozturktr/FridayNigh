@@ -22,6 +22,8 @@ public class ToiletMan extends Staff {
         //remove the amount of your stock
         //this method will throw a selfmade Exception if you're
         //out of toilet paper
+
+
     }
 
     private void promoteSafeFun(Customer customer){
