@@ -7,7 +7,7 @@ public class Customer {
     private int beersThatTheyDrunk;
     private final double tippingAmount = 1.50;
 
-    public Customer() {
+    public Customer(String greg, int i, int i1, boolean b, boolean b1) {
     }
 
     public Customer(String name, int age, double euros, boolean hasCondom) {
