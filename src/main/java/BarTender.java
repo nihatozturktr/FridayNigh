@@ -54,14 +54,16 @@ public class BarTender extends Staff{
         //and make sure that the customer drinkAmount goes up
         // and money goes down if good
 
-        int buyCocktail =0;
-        if (customer.getEuros()>amount){
-            ++buyCocktail;
-            customer.setBeersThatTheyDrunk(buyCocktail);
-            --amount;
-        }else
-                System.out.println("There are not enough money");
+        int buyCocktailNow = customer.getBeersThatTheyDrunk();
+        double totalprice= amount*beerPrice;
+        if (customer.getEuros()>totalprice) {
+            buyCocktailNow+=amount;
+            customer.setBeersThatTheyDrunk(buyCocktailNow);
+            customer.setEuros(customer.getEuros()-totalprice);
+        }else {
+            System.out.println("There are not enough money");
 
+        }
 
         }
 
@@ -82,4 +84,4 @@ public class BarTender extends Staff{
 
 
 
-}
+
