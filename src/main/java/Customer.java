@@ -6,15 +6,13 @@ public class Customer {
     private boolean hasCondom;
     private int beersThatTheyDrunk;
     private final double tippingAmount = 1.50;
-
-    public Customer() {
+    public Customer(String greg, int i, int i1, boolean b, boolean b1) {
     }
 
     public Customer(String name, int age, double euros, boolean hasCondom) {
         this.name = name;
         this.age = age;
         this.euros = euros;
-      
         this.hasCondom = hasCondom;
     }
 
@@ -61,18 +59,36 @@ public class Customer {
     }
 
 
-    public boolean feelingConfident(){
+    public boolean feelingConfident() {
         //check if they drank more than 5 beers and if they have a condom
-        return false;
-    }
+        if (beersThatTheyDrunk > 5 && hasCondom == true) {
+            return true;
+        }else{
+            return false;
+        } }
 
-    public int tipTheCuteStaff(Staff staff){
-        // check how many drinks you had.
+    public double tipTheCuteStaff(Staff staff){
+        //1. make sure that you return the leftover money you hav after tips calculation
+        //2: Make sure the customers money goes down
+        //3. Make sure the staff's tips go up
+        //---------------------------------------------------------
         //multiply that amount of drinks with the tippingAmount
+        // check how many drinks you had.
+        double expectedTip = beersThatTheyDrunk * tippingAmount;
         //check if you have enough money. If the amount is too low,
+        boolean enoughMoney;
+        if(euros>expectedTip){
+            enoughMoney = true;
+            euros-=expectedTip;
+            staff.setAmountsOfTips((staff.getAmountsOfTips()+expectedTip));
+        }
+        else{
+
+            staff.setAmountsOfTips(staff.getAmountsOfTips()+euros);
+            euros=0;
+        }
+        return  euros;
         //only give the amount that you have left
         //return the amount of money you have left
-        return 0;
-        //test
     }
 }

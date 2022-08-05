@@ -46,7 +46,7 @@ class DeeJayTest {
         Tom.playARequest(Genre.DISCO);
         String request = "Playing your song";
         Assert.assertEquals("Playing your song", request);
-        //Assert.assertNotEquals(RuntimeException.class, ()-> Tom.playARequest(Genre.RAP));
+        Assert.assertNotEquals(RuntimeException.class, ()-> Tom.playARequest(Genre.RAP));
 
 
     }
