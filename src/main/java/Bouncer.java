@@ -30,6 +30,16 @@ public class Bouncer extends Staff {
 
     public boolean isCustomerOldEnoughToEnter(Customer customer,double bribe){
 
+
+       /*
+       This will result in the function returning true even if the
+        person is underage and has not enough money. or we can do the follwing:
+        public boolean isCustomerOldEnoughToEnter(Customer customer, double bribe) {
+            return customer.getAge()<18 && customer.getEuros()>=minimumBribe;
+        }
+
+        */
+
             if(customer.getAge()<18){
                 if(customer.getEuros()>=minimumBribe){
                     return true;
