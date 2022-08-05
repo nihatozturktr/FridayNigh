@@ -7,7 +7,7 @@ public class Customer {
     private int beersThatTheyDrunk;
     private final double tippingAmount = 1.50;
 
-    public Customer() {
+    public Customer(String greg, int i, int i1, boolean b, boolean b1) {
     }
 
     public Customer(String name, int age, double euros, boolean hasCondom) {
@@ -62,37 +62,34 @@ public class Customer {
 
     public boolean feelingConfident() {
         //check if they drank more than 5 beers and if they have a condom
+        return beersThatTheyDrunk > 5 && hasCondom == true;
+        /*
         if (beersThatTheyDrunk > 5 && hasCondom == true) {
             return true;
         }else{
             return false;
-        } }
+        } */
+    }
 
     public double tipTheCuteStaff(Staff staff){
         //1. make sure that you return the leftover money you hav after tips calculation
         //2: Make sure the customers money goes down
         //3. Make sure the staff's tips go up
-        //---------------------------------------------------------
+        //multiply that amount of drinks with the tippingAmount
+        // check how many drinks you had.
         //multiply that amount of drinks with the tippingAmount
         // check how many drinks you had.
         double expectedTip = beersThatTheyDrunk * tippingAmount;
-        //check if you have enough money. If the amount is too low,
-
-       boolean enoughMoney;
-       if(euros>expectedTip){
-           enoughMoney = true;
-           euros-=expectedTip;
-           staff.setAmountsOfTips((staff.getAmountsOfTips()+expectedTip));
-       }
-       else{
-
-           staff.setAmountsOfTips(staff.getAmountsOfTips()+euros);
+         if(euros>=expectedTip){
+            euros-=expectedTip;
+            staff.setAmountsOfTips((staff.getAmountsOfTips()+expectedTip));
+            return euros;
+         }
+           staff.setAmountsOfTips((staff.getAmountsOfTips()+euros));
            euros=0;
-       }
-       return  euros;
-
-        //only give the amount that you have left
-        //return the amount of money you have left
+           return  euros;
+         }
 
     }
-}
+
+

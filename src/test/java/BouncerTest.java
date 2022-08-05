@@ -11,14 +11,20 @@ public class BouncerTest {
         underAgeCustomer = new Customer("Name",15,30,true);
         ofAgeCustomer = new Customer("Name",18,30,true);
         bouncer = new Bouncer("Sally",20);
+
     }
     @Test
     public void testAgeRestriction(){
         Assert.assertFalse(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer));
-        System.out.println("Good");
-        Assert.assertTrue();
-
-    //Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
-
+        System.out.println("Testing age restriction passed underage");
+        Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
+        System.out.println("Testing age restriction passed adult");
+    }
+    @Test
+    public  void testBrid(){
+        Assert.assertFalse(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer));
+        System.out.println("Testing age and Bird restriction  passed ");
+        Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
+        System.out.println("Testing age and Bird restriction  passed ");
     }
 }
