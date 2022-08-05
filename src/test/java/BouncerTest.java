@@ -15,7 +15,6 @@ public class BouncerTest {
     }
     @Test
     public void testAgeRestriction(){
-
         Assert.assertFalse(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer));
         System.out.println("Testing age restriction passed underage");
         Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
