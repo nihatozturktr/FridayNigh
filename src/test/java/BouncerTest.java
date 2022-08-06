@@ -15,6 +15,7 @@ public class BouncerTest {
     }
     @Test
     public void testAgeRestriction(){
+
         Assert.assertFalse(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer));
         System.out.println("Testing age restriction passed underage");
         Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
@@ -26,5 +27,9 @@ public class BouncerTest {
         System.out.println("Testing age and Bird restriction  passed ");
         Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
         System.out.println("Testing age and Bird restriction  passed ");
+
+        Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(underAgeCustomer));
+        Assert.assertTrue(bouncer.isCustomerOldEnoughToEnter(ofAgeCustomer));
+
     }
 }

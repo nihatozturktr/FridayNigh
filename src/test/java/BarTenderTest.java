@@ -2,7 +2,12 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+
 public class BarTenderTest {
+
+
+class BarTenderTest {
+
 
     private static Customer customerWithMoreMoney;
     private static Customer customerWithLittleMoney;
@@ -23,9 +28,5 @@ public class BarTenderTest {
         barTender.buyBeer(customerWithMoreMoney,1);
         Assert.assertEquals(1,customerWithMoreMoney.getBeersThatTheyDrunk());
         Assert.assertEquals(10,customerWithMoreMoney.getEuros(),0.01);
-
-
-
-
     }
-}
+}}

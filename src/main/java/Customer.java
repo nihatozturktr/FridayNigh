@@ -7,7 +7,8 @@ public class Customer {
     private int beersThatTheyDrunk;
     private final double tippingAmount = 1.50;
 
-    public Customer(String greg, int i, int i1, boolean b, boolean b1) {
+    public Customer(){
+
     }
 
     public Customer(String name, int age, double euros, boolean hasCondom) {
@@ -41,8 +42,6 @@ public class Customer {
         this.euros = euros;
     }
 
-
-
     public boolean isHasCondom() {
         return hasCondom;
     }
@@ -63,12 +62,7 @@ public class Customer {
     public boolean feelingConfident() {
         //check if they drank more than 5 beers and if they have a condom
         return beersThatTheyDrunk > 5 && hasCondom == true;
-        /*
-        if (beersThatTheyDrunk > 5 && hasCondom == true) {
-            return true;
-        }else{
-            return false;
-        } */
+
     }
 
     public double tipTheCuteStaff(Staff staff){
@@ -91,5 +85,8 @@ public class Customer {
          }
 
     }
+
+
+
 
 

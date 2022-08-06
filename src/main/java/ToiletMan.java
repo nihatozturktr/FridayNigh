@@ -1,8 +1,8 @@
 public class ToiletMan extends Staff {
 
+
+
     private int toiletPaperStock;
-
-
     public ToiletMan(String name, int toiletPaperStock) {
         super(name);
         this.toiletPaperStock = toiletPaperStock;

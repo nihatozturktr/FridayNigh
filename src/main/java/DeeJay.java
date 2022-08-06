@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-public class DeeJay extends Staff{
+public class DeeJay extends Staff {
 
     private int amountSongsANight;
     private List<Genre> genres = new ArrayList<>();
+
     public DeeJay(String name, int amountSongsANight, List<Genre> genres) {
         super(name);
         this.amountSongsANight = amountSongsANight;
@@ -27,10 +28,10 @@ public class DeeJay extends Staff{
         this.genres = genres;
     }
 
-    public String playASong(){
+    public String playASong() {
         Collections.shuffle(genres);
-        amountSongsANight=getAmountSongsANight();
-        if(amountSongsANight < 7){
+        amountSongsANight = getAmountSongsANight();
+        if (amountSongsANight < 7) {
             amountSongsANight++;
             setAmountSongsANight(amountSongsANight);
         }
@@ -41,18 +42,15 @@ public class DeeJay extends Staff{
         //underlying phrase
     }
 
-    public void playARequest(Genre genre) throws Exception{
-        if(genre.equals(genres)){
+    public void playARequest(Genre genre) throws Exception {
+        if (genre.equals(genres)) {
             amountSongsANight++;
-        }
-        else
+        } else
             throw new Exception("there is no such a song");
         //throws an exception if this genre is
         //not in the genres of this Deejay
         //else, just play the genre and add one to the amountEachNight
     }
-
-
 
 
 }
