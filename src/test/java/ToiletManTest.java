@@ -7,8 +7,6 @@ import org.junit.Test;
 
 public class ToiletManTest {
 
-
-
     @Test
     public void fillToiletStallsWithToiletPaperTest() throws Exception {
         ToiletMan toiletman = new ToiletMan("greg", 5);

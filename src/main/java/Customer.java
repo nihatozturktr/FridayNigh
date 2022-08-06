@@ -60,31 +60,25 @@ public class Customer {
 
 
     public boolean feelingConfident() {
-        //check if they drank more than 5 beers and if they have a condom
-        return beersThatTheyDrunk > 5 && hasCondom == true;
-
+        return this.beersThatTheyDrunk > 5 && this.hasCondom;
     }
 
-    public double tipTheCuteStaff(Staff staff){
-        //1. make sure that you return the leftover money you hav after tips calculation
-        //2: Make sure the customers money goes down
-        //3. Make sure the staff's tips go up
-        //multiply that amount of drinks with the tippingAmount
-        // check how many drinks you had.
-        //multiply that amount of drinks with the tippingAmount
-        // check how many drinks you had.
-        double expectedTip = beersThatTheyDrunk * tippingAmount;
-         if(euros>=expectedTip){
-            euros-=expectedTip;
-            staff.setAmountsOfTips((staff.getAmountsOfTips()+expectedTip));
-            return euros;
-         }
-           staff.setAmountsOfTips((staff.getAmountsOfTips()+euros));
-           euros=0;
-           return  euros;
-         }
-
+    public double tipTheCuteStaff(Staff staff) {
+        double expectedTip = (double)this.beersThatTheyDrunk * 1.5;
+        if (this.euros >= expectedTip) {
+            this.euros -= expectedTip;
+            staff.setAmountsOfTips(staff.getAmountsOfTips() + expectedTip);
+            return this.euros;
+        } else {
+            staff.setAmountsOfTips(staff.getAmountsOfTips() + this.euros);
+            this.euros = 0.0;
+            return this.euros;
+        }
     }
+}
+
+
+
 
 
 
